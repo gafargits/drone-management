@@ -10,6 +10,8 @@ public class Medication {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
+    private String name;
+
     @Column(name = "medicationWeight")
     private double weight;
 
@@ -22,8 +24,9 @@ public class Medication {
     public Medication() {
     }
 
-    public Medication(UUID id, double weight, String code, String medicationImage) {
+    public Medication(UUID id, String name, double weight, String code, String medicationImage) {
         this.id = id;
+        this.name = name;
         this.weight = weight;
         this.code = code;
         this.medicationImage = medicationImage;
@@ -59,5 +62,13 @@ public class Medication {
 
     public void setMedicationImage(String medicationImage) {
         this.medicationImage = medicationImage;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
