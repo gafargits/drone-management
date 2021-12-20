@@ -1,4 +1,4 @@
-package com.musala.dronemanagement.models;
+package com.musala.dronemanagement.entities;
 
 public enum DroneState {
     IDLE,

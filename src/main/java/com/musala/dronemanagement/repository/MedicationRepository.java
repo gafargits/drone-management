@@ -1,10 +1,13 @@
 package com.musala.dronemanagement.repository;
 
-import com.musala.dronemanagement.models.Medication;
+import com.musala.dronemanagement.entities.MedicationEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.UUID;
 
-public interface MedicationRepository extends JpaRepository<Medication, UUID> {
-    public Medication findByName(String name);
+@Repository
+public interface MedicationRepository extends JpaRepository<MedicationEntity, UUID> {
+    public MedicationEntity findByCode(String name);
+//    public MedicationEntity findByMedicationCode(String name);
 }

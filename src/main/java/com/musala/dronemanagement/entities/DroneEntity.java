@@ -1,26 +1,31 @@
-package com.musala.dronemanagement.models;
+package com.musala.dronemanagement.entities;
+
+//import com.musala.dronemanagement.models.request.MedicationRequest;
+
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import java.util.ArrayList;
-import java.util.Collection;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
-public class Drone {
+@Table(uniqueConstraints = {
+        @UniqueConstraint(columnNames = "serialNumber", name = "uq_tbl_drone_entity_col_name")
+})
+public class DroneEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
-    @Column(length = 100, name = "serialNumber")
+
     private long serialNumber;
 
-    @Column(name = "droneModel")
     @Enumerated(EnumType.STRING)
     private DroneModel model;
 
-    @Column(name = "droneWeight")
     @Max(value = 500, message = "Max weight is 500")
     @Min(value = 0, message = "Weight cannot be negative")
     private double weight;
@@ -29,23 +34,24 @@ public class Drone {
     @Max(value = 100, message = "Battery capacity cannot exceed 100%")
     private int batteryCapacity;
 
-    @Column(name = "droneState")
     @Enumerated(EnumType.STRING)
     private DroneState state;
 
-    @OneToMany(fetch = FetchType.EAGER)
-    private Collection<Medication> medications = new ArrayList<>();
+    @Cascade(org.hibernate.annotations.CascadeType.PERSIST)
+    @ManyToMany(fetch = FetchType.LAZY)
+    private List<MedicationEntity> medications = new ArrayList<>();
 
-    public Drone() {
+    public DroneEntity() {
     }
 
-    public Drone(UUID id, long serialNumber, DroneModel model, @Max(value = 500, message = "Max weight is 500") @Min(value = 0, message = "Weight cannot be negative") double weight, @Min(value = 0, message = "Battery capacity cannot be negative") @Max(value = 100, message = "Battery capacity cannot exceed 100%") int batteryCapacity, DroneState state) {
+    public DroneEntity(UUID id, long serialNumber, DroneModel model, @Max(value = 500, message = "Max weight is 500") @Min(value = 0, message = "Weight cannot be negative") double weight, @Min(value = 0, message = "Battery capacity cannot be negative") @Max(value = 100, message = "Battery capacity cannot exceed 100%") int batteryCapacity, DroneState state, List<MedicationEntity> medications) {
         this.id = id;
         this.serialNumber = serialNumber;
         this.model = model;
         this.weight = weight;
         this.batteryCapacity = batteryCapacity;
         this.state = state;
+        this.medications = medications;
     }
 
     public UUID getId() {
@@ -94,5 +100,13 @@ public class Drone {
 
     public void setState(DroneState state) {
         this.state = state;
+    }
+
+    public List<MedicationEntity> getMedications() {
+        return medications;
+    }
+
+    public void setMedications(List<MedicationEntity> medications) {
+        this.medications = medications;
     }
 }

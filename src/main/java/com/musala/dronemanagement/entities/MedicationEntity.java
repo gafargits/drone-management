@@ -1,15 +1,15 @@
-package com.musala.dronemanagement.models;
+package com.musala.dronemanagement.entities;
 
 import javax.persistence.*;
-import java.util.Objects;
 import java.util.UUID;
 
 @Entity
-public class Medication {
+public class MedicationEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
+    @Column
     private String name;
 
     @Column(name = "medicationWeight")
@@ -18,18 +18,19 @@ public class Medication {
     @Column(name = "medicationCode")
     private String code;
 
-    @Column(name = "medicationImage", length = 64)
-    private String medicationImage;
+    @Column(name = "medicationImageUrl")
+    private String medicationImageUrl;
 
-    public Medication() {
+
+    public MedicationEntity() {
     }
 
-    public Medication(UUID id, String name, double weight, String code, String medicationImage) {
+    public MedicationEntity(UUID id, String name, double weight, String code, String medicationImageUrl) {
         this.id = id;
         this.name = name;
         this.weight = weight;
         this.code = code;
-        this.medicationImage = medicationImage;
+        this.medicationImageUrl = medicationImageUrl;
     }
 
     public UUID getId() {
@@ -57,11 +58,11 @@ public class Medication {
     }
 
     public String getMedicationImage() {
-        return medicationImage;
+        return medicationImageUrl;
     }
 
-    public void setMedicationImage(String medicationImage) {
-        this.medicationImage = medicationImage;
+    public void setMedicationImage(String medicationImageUrl) {
+        this.medicationImageUrl = medicationImageUrl;
     }
 
     public String getName() {
