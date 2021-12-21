@@ -1,0 +1,69 @@
+2021-12-21 17:18:12.338  INFO 34704 --- [restartedMain] c.m.d.DroneManagementApplication         : Starting DroneManagementApplication using Java 13.0.2 on Geefee with PID 34704 (C:\Development\portfolio\Java\drone-management\target\classes started by Gafar in C:\Development\portfolio\Java\drone-management)
+2021-12-21 17:18:12.341  INFO 34704 --- [restartedMain] c.m.d.DroneManagementApplication         : No active profile set, falling back to default profiles: default
+2021-12-21 17:18:12.410  INFO 34704 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-21 17:18:12.410  INFO 34704 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-21 17:18:13.505  INFO 34704 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-21 17:18:13.591  INFO 34704 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 2 JPA repository interfaces.
+2021-12-21 17:18:14.799  INFO 34704 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5000 (http)
+2021-12-21 17:18:14.814  INFO 34704 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-21 17:18:14.815  INFO 34704 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-12-21 17:18:14.940  INFO 34704 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-21 17:18:14.941  INFO 34704 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2529 ms
+2021-12-21 17:18:15.161  INFO 34704 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-21 17:18:15.231  INFO 34704 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-12-21 17:18:15.422  INFO 34704 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-21 17:18:15.540  INFO 34704 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-21 17:18:15.658  INFO 34704 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-21 17:18:15.677  INFO 34704 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2021-12-21 17:18:16.946  INFO 34704 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-21 17:18:16.954  INFO 34704 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-21 17:18:17.558  WARN 34704 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-21 17:18:17.950  WARN 34704 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-12-21 17:18:18.362  INFO 34704 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5000 (http) with context path ''
+2021-12-21 17:18:18.377  INFO 34704 --- [restartedMain] c.m.d.DroneManagementApplication         : Started DroneManagementApplication in 6.589 seconds (JVM running for 7.29)
+2021-12-21 17:21:25.028  INFO 24908 --- [restartedMain] c.m.d.DroneManagementApplication         : Starting DroneManagementApplication using Java 13.0.2 on Geefee with PID 24908 (C:\Development\portfolio\Java\drone-management\target\classes started by Gafar in C:\Development\portfolio\Java\drone-management)
+2021-12-21 17:21:25.030  INFO 24908 --- [restartedMain] c.m.d.DroneManagementApplication         : No active profile set, falling back to default profiles: default
+2021-12-21 17:21:25.106  INFO 24908 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-21 17:21:25.107  INFO 24908 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-21 17:21:26.244  INFO 24908 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-21 17:21:26.322  INFO 24908 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 2 JPA repository interfaces.
+2021-12-21 17:21:27.468  INFO 24908 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5000 (http)
+2021-12-21 17:21:27.480  INFO 24908 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-21 17:21:27.481  INFO 24908 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-12-21 17:21:27.602  INFO 24908 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-21 17:21:27.603  INFO 24908 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2495 ms
+2021-12-21 17:21:27.795  INFO 24908 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-21 17:21:27.864  INFO 24908 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-12-21 17:21:28.038  INFO 24908 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-21 17:21:28.159  INFO 24908 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-21 17:21:28.271  INFO 24908 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-21 17:21:28.289  INFO 24908 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2021-12-21 17:21:29.566  INFO 24908 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-21 17:21:29.575  INFO 24908 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-21 17:21:30.185  WARN 24908 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-21 17:21:30.598  WARN 24908 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-12-21 17:21:31.018  INFO 24908 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5000 (http) with context path ''
+2021-12-21 17:21:31.029  INFO 24908 --- [restartedMain] c.m.d.DroneManagementApplication         : Started DroneManagementApplication in 6.538 seconds (JVM running for 7.486)
+2021-12-21 17:24:15.505  INFO 28740 --- [restartedMain] c.m.d.DroneManagementApplication         : Starting DroneManagementApplication using Java 13.0.2 on Geefee with PID 28740 (C:\Development\portfolio\Java\drone-management\target\classes started by Gafar in C:\Development\portfolio\Java\drone-management)
+2021-12-21 17:24:15.507  INFO 28740 --- [restartedMain] c.m.d.DroneManagementApplication         : No active profile set, falling back to default profiles: default
+2021-12-21 17:24:15.613  INFO 28740 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-21 17:24:15.614  INFO 28740 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-21 17:24:16.643  INFO 28740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-21 17:24:16.719  INFO 28740 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
+2021-12-21 17:24:17.894  INFO 28740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5000 (http)
+2021-12-21 17:24:17.907  INFO 28740 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-21 17:24:17.907  INFO 28740 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-12-21 17:24:18.045  INFO 28740 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-21 17:24:18.046  INFO 28740 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2425 ms
+2021-12-21 17:24:18.236  INFO 28740 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-21 17:24:18.297  INFO 28740 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-12-21 17:24:18.497  INFO 28740 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-21 17:24:18.615  INFO 28740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-21 17:24:18.724  INFO 28740 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-21 17:24:18.745  INFO 28740 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2021-12-21 17:24:19.999  INFO 28740 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-21 17:24:20.007  INFO 28740 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-21 17:24:20.583  WARN 28740 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-21 17:24:20.995  WARN 28740 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-12-21 17:24:21.373  INFO 28740 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5000 (http) with context path ''
+2021-12-21 17:24:21.382  INFO 28740 --- [restartedMain] c.m.d.DroneManagementApplication         : Started DroneManagementApplication in 6.425 seconds (JVM running for 7.104)

@@ -1,8 +1,6 @@
 package com.musala.dronemanagement.controllers;
 
-import com.musala.dronemanagement.exceptions.DroneException;
-import com.musala.dronemanagement.exceptions.DroneNotFoundException;
-import com.musala.dronemanagement.exceptions.DroneRequestException;
+import com.musala.dronemanagement.exceptions.*;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -35,7 +33,6 @@ public class ErrorHandlingControllerAdvice extends ResponseEntityExceptionHandle
                 HttpStatus.BAD_REQUEST,
                 ZonedDateTime.now(ZoneId.of("Z"))
         );
-        System.out.println(exception);
         return new ResponseEntity<>(droneException, HttpStatus.BAD_REQUEST);
     }
 
@@ -89,5 +86,26 @@ public class ErrorHandlingControllerAdvice extends ResponseEntityExceptionHandle
                 ZonedDateTime.now(ZoneId.of("Z"))
         );
         return new ResponseEntity<>(droneException, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(value = {MedicationRequestException.class})
+    public ResponseEntity<Object> handleMedicationRequestException(MedicationRequestException e){
+        MedicationException medicationException =  new MedicationException(
+                e.getMessage(),
+                HttpStatus.BAD_REQUEST,
+                ZonedDateTime.now(ZoneId.of("Z"))
+        );
+        return new ResponseEntity<>(medicationException, HttpStatus.BAD_REQUEST);
+    }
+
+
+    @ExceptionHandler(value = {MedicationNotFoundException.class})
+    public ResponseEntity<Object> handleMedicationNotFoundException(MedicationNotFoundException e){
+        MedicationException medicationException =  new MedicationException(
+                e.getMessage(),
+                HttpStatus.NOT_FOUND,
+                ZonedDateTime.now(ZoneId.of("Z"))
+        );
+        return new ResponseEntity<>(medicationException, HttpStatus.NOT_FOUND);
     }
 }

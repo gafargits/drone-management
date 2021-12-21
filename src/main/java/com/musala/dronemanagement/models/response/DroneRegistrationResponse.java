@@ -2,7 +2,6 @@ package com.musala.dronemanagement.models.response;
 
 import com.musala.dronemanagement.entities.DroneModel;
 import com.musala.dronemanagement.entities.DroneState;
-import com.musala.dronemanagement.models.request.MedicationRequest;
 
 import java.util.ArrayList;
 import java.util.List;

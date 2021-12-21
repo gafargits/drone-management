@@ -3,6 +3,7 @@ package com.musala.dronemanagement.services;
 import com.musala.dronemanagement.entities.DroneEntity;
 import com.musala.dronemanagement.models.request.DroneRegistrationRequest;
 import com.musala.dronemanagement.models.request.LoadDroneRequest;
+import com.musala.dronemanagement.models.response.BatteryLevelResponse;
 import com.musala.dronemanagement.models.response.DroneRegistrationResponse;
 import com.musala.dronemanagement.models.response.LoadDroneResponse;
 import com.musala.dronemanagement.models.response.MedicationResponse;
@@ -19,4 +20,5 @@ public interface DroneService {
     List<DroneRegistrationResponse> availableDrones();
     long batteryLevel(UUID droneId);
     List<DroneRegistrationResponse> allDrones();
+    List<BatteryLevelResponse> batteryLevels();
 }

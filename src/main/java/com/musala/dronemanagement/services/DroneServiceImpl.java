@@ -8,6 +8,7 @@ import com.musala.dronemanagement.exceptions.DroneRequestException;
 import com.musala.dronemanagement.exceptions.MedicationNotFoundException;
 import com.musala.dronemanagement.models.request.DroneRegistrationRequest;
 import com.musala.dronemanagement.models.request.LoadDroneRequest;
+import com.musala.dronemanagement.models.response.BatteryLevelResponse;
 import com.musala.dronemanagement.models.response.DroneRegistrationResponse;
 import com.musala.dronemanagement.models.response.LoadDroneResponse;
 import com.musala.dronemanagement.models.response.MedicationResponse;
@@ -115,5 +116,14 @@ public class DroneServiceImpl implements DroneService {
                 .map(drone -> modelMapper.map(drone, DroneRegistrationResponse.class))
                 .collect(Collectors.toList());
         return drones;
+    }
+
+    @Override
+    public List<BatteryLevelResponse> batteryLevels() {
+        List<BatteryLevelResponse> batteryLevels = droneRepository.findAll()
+                .stream()
+                .map(drone -> modelMapper.map(drone, BatteryLevelResponse.class))
+                .collect(Collectors.toList());
+        return batteryLevels;
     }
 }

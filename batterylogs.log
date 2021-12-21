@@ -1,0 +1,264 @@
+2021-12-22 00:01:13.027  INFO 34628 --- [restartedMain] c.m.d.DroneManagementApplication         : Starting DroneManagementApplication using Java 13.0.2 on Geefee with PID 34628 (C:\Development\portfolio\Java\drone-management\target\classes started by Gafar in C:\Development\portfolio\Java\drone-management)
+2021-12-22 00:01:13.505  INFO 34628 --- [restartedMain] c.m.d.DroneManagementApplication         : No active profile set, falling back to default profiles: default
+2021-12-22 00:01:13.603  INFO 34628 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-22 00:01:13.604  INFO 34628 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-22 00:01:14.588  INFO 34628 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-22 00:01:14.658  INFO 34628 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 2 JPA repository interfaces.
+2021-12-22 00:01:15.801  INFO 34628 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5000 (http)
+2021-12-22 00:01:15.811  INFO 34628 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-22 00:01:15.812  INFO 34628 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-12-22 00:01:15.927  INFO 34628 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-22 00:01:15.928  INFO 34628 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2323 ms
+2021-12-22 00:01:16.106  INFO 34628 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-22 00:01:16.165  INFO 34628 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-12-22 00:01:16.330  INFO 34628 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-22 00:01:16.449  INFO 34628 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-22 00:01:16.571  INFO 34628 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-22 00:01:16.588  INFO 34628 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2021-12-22 00:01:17.946  INFO 34628 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-22 00:01:17.954  INFO 34628 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-22 00:01:18.528  WARN 34628 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-22 00:01:18.947  WARN 34628 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-12-22 00:01:19.390  INFO 34628 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5000 (http) with context path ''
+2021-12-22 00:01:19.401  INFO 34628 --- [restartedMain] c.m.d.DroneManagementApplication         : Started DroneManagementApplication in 6.868 seconds (JVM running for 7.568)
+2021-12-22 00:01:24.016  INFO 34628 --- [http-nio-5000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-22 00:01:24.017  INFO 34628 --- [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-12-22 00:01:24.024  INFO 34628 --- [http-nio-5000-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-12-22 00:01:24.071  INFO 34628 --- [http-nio-5000-exec-1] c.m.d.controllers.DroneController        : Battery status
+2021-12-22 00:01:24.247  INFO 34628 --- [http-nio-5000-exec-1] c.m.d.controllers.DroneController        : Drone 93845490
+2021-12-22 00:01:24.247  INFO 34628 --- [http-nio-5000-exec-1] c.m.d.controllers.DroneController        : Drone 93845488
+2021-12-22 00:01:24.247  INFO 34628 --- [http-nio-5000-exec-1] c.m.d.controllers.DroneController        : Drone 93845477
+2021-12-22 00:01:24.248  INFO 34628 --- [http-nio-5000-exec-1] c.m.d.controllers.DroneController        : Drone 93845489
+2021-12-22 00:02:14.799  INFO 34628 --- [http-nio-5000-exec-3] c.m.d.controllers.DroneController        : Battery status
+2021-12-22 00:02:14.806  INFO 34628 --- [http-nio-5000-exec-3] c.m.d.controllers.DroneController        : Drone 93845490
+2021-12-22 00:02:14.807  INFO 34628 --- [http-nio-5000-exec-3] c.m.d.controllers.DroneController        : Drone 93845488
+2021-12-22 00:02:14.807  INFO 34628 --- [http-nio-5000-exec-3] c.m.d.controllers.DroneController        : Drone 93845477
+2021-12-22 00:02:14.808  INFO 34628 --- [http-nio-5000-exec-3] c.m.d.controllers.DroneController        : Drone 93845489
+2021-12-22 00:07:05.485  INFO 20436 --- [restartedMain] c.m.d.DroneManagementApplication         : Starting DroneManagementApplication using Java 13.0.2 on Geefee with PID 20436 (C:\Development\portfolio\Java\drone-management\target\classes started by Gafar in C:\Development\portfolio\Java\drone-management)
+2021-12-22 00:07:05.487  INFO 20436 --- [restartedMain] c.m.d.DroneManagementApplication         : No active profile set, falling back to default profiles: default
+2021-12-22 00:07:05.557  INFO 20436 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-22 00:07:05.558  INFO 20436 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-22 00:07:06.962  INFO 20436 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-22 00:07:07.039  INFO 20436 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 66 ms. Found 2 JPA repository interfaces.
+2021-12-22 00:07:08.186  INFO 20436 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5000 (http)
+2021-12-22 00:07:08.198  INFO 20436 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-22 00:07:08.199  INFO 20436 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-12-22 00:07:08.311  INFO 20436 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-22 00:07:08.312  INFO 20436 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2753 ms
+2021-12-22 00:07:08.498  INFO 20436 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-22 00:07:08.562  INFO 20436 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-12-22 00:07:08.742  INFO 20436 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-22 00:07:08.870  INFO 20436 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-22 00:07:09.343  INFO 20436 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-22 00:07:09.359  INFO 20436 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2021-12-22 00:07:10.612  INFO 20436 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-22 00:07:10.620  INFO 20436 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-22 00:07:11.160  WARN 20436 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-22 00:07:11.541  WARN 20436 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-12-22 00:07:11.946  INFO 20436 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5000 (http) with context path ''
+2021-12-22 00:07:11.958  INFO 20436 --- [restartedMain] c.m.d.DroneManagementApplication         : Started DroneManagementApplication in 7.019 seconds (JVM running for 7.749)
+2021-12-22 00:10:40.347  INFO 17312 --- [restartedMain] c.m.d.DroneManagementApplication         : Starting DroneManagementApplication using Java 13.0.2 on Geefee with PID 17312 (C:\Development\portfolio\Java\drone-management\target\classes started by Gafar in C:\Development\portfolio\Java\drone-management)
+2021-12-22 00:10:40.348  INFO 17312 --- [restartedMain] c.m.d.DroneManagementApplication         : No active profile set, falling back to default profiles: default
+2021-12-22 00:10:40.417  INFO 17312 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-22 00:10:40.418  INFO 17312 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-22 00:10:41.480  INFO 17312 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-22 00:10:41.552  INFO 17312 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 2 JPA repository interfaces.
+2021-12-22 00:10:42.849  INFO 17312 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5000 (http)
+2021-12-22 00:10:42.861  INFO 17312 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-22 00:10:42.862  INFO 17312 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-12-22 00:10:43.023  INFO 17312 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-22 00:10:43.024  INFO 17312 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2604 ms
+2021-12-22 00:10:43.248  INFO 17312 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-22 00:10:43.307  INFO 17312 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-12-22 00:10:43.510  INFO 17312 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-22 00:10:43.628  INFO 17312 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-22 00:10:43.757  INFO 17312 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-22 00:10:43.775  INFO 17312 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2021-12-22 00:10:45.011  INFO 17312 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-22 00:10:45.024  INFO 17312 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-22 00:10:45.680  WARN 17312 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-22 00:10:46.705  WARN 17312 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-12-22 00:10:47.085  INFO 17312 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5000 (http) with context path ''
+2021-12-22 00:10:47.098  INFO 17312 --- [restartedMain] c.m.d.DroneManagementApplication         : Started DroneManagementApplication in 7.254 seconds (JVM running for 8.216)
+2021-12-22 00:10:47.125  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Battery status
+2021-12-22 00:10:47.329  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845490
+2021-12-22 00:10:47.330  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845488
+2021-12-22 00:10:47.330  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845477
+2021-12-22 00:10:47.330  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845489
+2021-12-22 00:10:52.109  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Battery status
+2021-12-22 00:10:52.113  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845490
+2021-12-22 00:10:52.113  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845488
+2021-12-22 00:10:52.113  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845477
+2021-12-22 00:10:52.113  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845489
+2021-12-22 00:10:57.107  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Battery status
+2021-12-22 00:10:57.113  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845490
+2021-12-22 00:10:57.113  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845488
+2021-12-22 00:10:57.114  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845477
+2021-12-22 00:10:57.114  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845489
+2021-12-22 00:11:02.104  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Battery status
+2021-12-22 00:11:02.108  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845490
+2021-12-22 00:11:02.109  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845488
+2021-12-22 00:11:02.109  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845477
+2021-12-22 00:11:02.109  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845489
+2021-12-22 00:11:07.109  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Battery status
+2021-12-22 00:11:07.116  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845490
+2021-12-22 00:11:07.116  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845488
+2021-12-22 00:11:07.116  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845477
+2021-12-22 00:11:07.116  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845489
+2021-12-22 00:11:12.103  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Battery status
+2021-12-22 00:11:12.106  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845490
+2021-12-22 00:11:12.106  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845488
+2021-12-22 00:11:12.107  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845477
+2021-12-22 00:11:12.107  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845489
+2021-12-22 00:11:17.099  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Battery status
+2021-12-22 00:11:17.103  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845490
+2021-12-22 00:11:17.104  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845488
+2021-12-22 00:11:17.104  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845477
+2021-12-22 00:11:17.104  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845489
+2021-12-22 00:11:22.104  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Battery status
+2021-12-22 00:11:22.108  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845490
+2021-12-22 00:11:22.109  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845488
+2021-12-22 00:11:22.109  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845477
+2021-12-22 00:11:22.109  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845489
+2021-12-22 00:11:27.097  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Battery status
+2021-12-22 00:11:27.103  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845490
+2021-12-22 00:11:27.103  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845488
+2021-12-22 00:11:27.103  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845477
+2021-12-22 00:11:27.103  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845489
+2021-12-22 00:11:32.105  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Battery status
+2021-12-22 00:11:32.110  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845490
+2021-12-22 00:11:32.111  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845488
+2021-12-22 00:11:32.111  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845477
+2021-12-22 00:11:32.111  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845489
+2021-12-22 00:11:37.100  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Battery status
+2021-12-22 00:11:37.104  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845490
+2021-12-22 00:11:37.104  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845488
+2021-12-22 00:11:37.104  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845477
+2021-12-22 00:11:37.104  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845489
+2021-12-22 00:11:42.096  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Battery status
+2021-12-22 00:11:42.099  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845490
+2021-12-22 00:11:42.100  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845488
+2021-12-22 00:11:42.100  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845477
+2021-12-22 00:11:42.100  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845489
+2021-12-22 00:11:47.102  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Battery status
+2021-12-22 00:11:47.112  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845490
+2021-12-22 00:11:47.112  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845488
+2021-12-22 00:11:47.112  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845477
+2021-12-22 00:11:47.113  INFO 17312 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845489
+2021-12-22 00:11:54.990  INFO 19124 --- [restartedMain] c.m.d.DroneManagementApplication         : Starting DroneManagementApplication using Java 13.0.2 on Geefee with PID 19124 (C:\Development\portfolio\Java\drone-management\target\classes started by Gafar in C:\Development\portfolio\Java\drone-management)
+2021-12-22 00:11:54.991  INFO 19124 --- [restartedMain] c.m.d.DroneManagementApplication         : No active profile set, falling back to default profiles: default
+2021-12-22 00:11:55.064  INFO 19124 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-22 00:11:55.064  INFO 19124 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-22 00:11:56.116  INFO 19124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-22 00:11:56.181  INFO 19124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 2 JPA repository interfaces.
+2021-12-22 00:11:57.403  INFO 19124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5000 (http)
+2021-12-22 00:11:57.415  INFO 19124 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-22 00:11:57.416  INFO 19124 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-12-22 00:11:57.535  INFO 19124 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-22 00:11:57.535  INFO 19124 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2470 ms
+2021-12-22 00:11:57.741  INFO 19124 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-22 00:11:57.811  INFO 19124 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-12-22 00:11:57.993  INFO 19124 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-22 00:11:58.129  INFO 19124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-22 00:11:58.372  INFO 19124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-22 00:11:58.388  INFO 19124 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2021-12-22 00:11:59.505  INFO 19124 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-22 00:11:59.513  INFO 19124 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-22 00:12:00.072  WARN 19124 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-22 00:12:00.459  WARN 19124 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-12-22 00:12:01.208  INFO 19124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5000 (http) with context path ''
+2021-12-22 00:12:01.220  INFO 19124 --- [restartedMain] c.m.d.DroneManagementApplication         : Started DroneManagementApplication in 6.787 seconds (JVM running for 7.447)
+2021-12-22 00:12:01.247  INFO 19124 --- [scheduling-1] c.m.d.controllers.DroneController        : Battery status
+2021-12-22 00:12:01.423  INFO 19124 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845490
+2021-12-22 00:12:01.426  INFO 19124 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845488
+2021-12-22 00:12:01.426  INFO 19124 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845477
+2021-12-22 00:12:01.426  INFO 19124 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845489
+2021-12-22 00:20:21.221  INFO 19124 --- [scheduling-1] c.m.d.controllers.DroneController        : Battery status
+2021-12-22 00:20:21.226  INFO 19124 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845490
+2021-12-22 00:20:21.227  INFO 19124 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845488
+2021-12-22 00:20:21.227  INFO 19124 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845477
+2021-12-22 00:20:21.227  INFO 19124 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845489
+2021-12-22 00:22:15.427  INFO 12264 --- [restartedMain] c.m.d.DroneManagementApplication         : Starting DroneManagementApplication using Java 13.0.2 on Geefee with PID 12264 (C:\Development\portfolio\Java\drone-management\target\classes started by Gafar in C:\Development\portfolio\Java\drone-management)
+2021-12-22 00:22:15.428  INFO 12264 --- [restartedMain] c.m.d.DroneManagementApplication         : No active profile set, falling back to default profiles: default
+2021-12-22 00:22:15.506  INFO 12264 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-22 00:22:15.507  INFO 12264 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-22 00:22:16.629  INFO 12264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-22 00:22:16.702  INFO 12264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 2 JPA repository interfaces.
+2021-12-22 00:22:17.868  INFO 12264 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5000 (http)
+2021-12-22 00:22:17.881  INFO 12264 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-22 00:22:17.882  INFO 12264 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-12-22 00:22:17.996  INFO 12264 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-22 00:22:17.997  INFO 12264 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2489 ms
+2021-12-22 00:22:18.188  INFO 12264 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-22 00:22:18.250  INFO 12264 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-12-22 00:22:18.441  INFO 12264 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-22 00:22:18.562  INFO 12264 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-22 00:22:18.680  INFO 12264 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-22 00:22:18.697  INFO 12264 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2021-12-22 00:22:20.036  INFO 12264 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-22 00:22:20.044  INFO 12264 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-22 00:22:20.610  WARN 12264 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-22 00:22:20.997  WARN 12264 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-12-22 00:22:21.366  INFO 12264 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5000 (http) with context path ''
+2021-12-22 00:22:21.379  INFO 12264 --- [restartedMain] c.m.d.DroneManagementApplication         : Started DroneManagementApplication in 6.448 seconds (JVM running for 7.114)
+2021-12-22 00:22:21.404  INFO 12264 --- [scheduling-1] c.m.d.controllers.DroneController        : Battery status
+2021-12-22 00:22:21.578  INFO 12264 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845490
+2021-12-22 00:22:21.578  INFO 12264 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845488
+2021-12-22 00:22:21.578  INFO 12264 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845477
+2021-12-22 00:22:21.578  INFO 12264 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845489
+2021-12-22 00:23:23.322  INFO 14960 --- [restartedMain] c.m.d.DroneManagementApplication         : Starting DroneManagementApplication using Java 13.0.2 on Geefee with PID 14960 (C:\Development\portfolio\Java\drone-management\target\classes started by Gafar in C:\Development\portfolio\Java\drone-management)
+2021-12-22 00:23:23.323  INFO 14960 --- [restartedMain] c.m.d.DroneManagementApplication         : No active profile set, falling back to default profiles: default
+2021-12-22 00:23:23.398  INFO 14960 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-22 00:23:23.398  INFO 14960 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-22 00:23:24.523  INFO 14960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-22 00:23:24.595  INFO 14960 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 2 JPA repository interfaces.
+2021-12-22 00:23:25.802  INFO 14960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5000 (http)
+2021-12-22 00:23:25.815  INFO 14960 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-22 00:23:25.815  INFO 14960 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-12-22 00:23:25.931  INFO 14960 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-22 00:23:25.932  INFO 14960 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2533 ms
+2021-12-22 00:23:26.129  INFO 14960 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-22 00:23:26.183  INFO 14960 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-12-22 00:23:26.347  INFO 14960 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-22 00:23:26.468  INFO 14960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-22 00:23:26.597  INFO 14960 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-22 00:23:26.615  INFO 14960 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2021-12-22 00:23:27.812  INFO 14960 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-22 00:23:27.821  INFO 14960 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-22 00:23:28.399  WARN 14960 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-22 00:23:28.801  WARN 14960 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-12-22 00:23:29.202  INFO 14960 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5000 (http) with context path ''
+2021-12-22 00:23:29.215  INFO 14960 --- [restartedMain] c.m.d.DroneManagementApplication         : Started DroneManagementApplication in 6.384 seconds (JVM running for 7.205)
+2021-12-22 00:23:29.242  INFO 14960 --- [scheduling-1] c.m.d.controllers.DroneController        : Battery status
+2021-12-22 00:23:29.412  INFO 14960 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845490
+2021-12-22 00:23:29.412  INFO 14960 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845488
+2021-12-22 00:23:29.412  INFO 14960 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845477
+2021-12-22 00:23:29.412  INFO 14960 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845489
+2021-12-22 00:25:07.816  INFO 19640 --- [restartedMain] c.m.d.DroneManagementApplication         : Starting DroneManagementApplication using Java 13.0.2 on Geefee with PID 19640 (C:\Development\portfolio\Java\drone-management\target\classes started by Gafar in C:\Development\portfolio\Java\drone-management)
+2021-12-22 00:25:07.817  INFO 19640 --- [restartedMain] c.m.d.DroneManagementApplication         : No active profile set, falling back to default profiles: default
+2021-12-22 00:25:07.889  INFO 19640 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-12-22 00:25:07.889  INFO 19640 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-12-22 00:25:08.946  INFO 19640 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-12-22 00:25:09.030  INFO 19640 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 2 JPA repository interfaces.
+2021-12-22 00:25:10.197  INFO 19640 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 5000 (http)
+2021-12-22 00:25:10.209  INFO 19640 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-12-22 00:25:10.210  INFO 19640 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-12-22 00:25:10.323  INFO 19640 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-12-22 00:25:10.323  INFO 19640 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2432 ms
+2021-12-22 00:25:10.509  INFO 19640 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-22 00:25:10.575  INFO 19640 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-12-22 00:25:10.788  INFO 19640 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-22 00:25:10.901  INFO 19640 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-12-22 00:25:11.127  INFO 19640 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-12-22 00:25:11.145  INFO 19640 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL81Dialect
+2021-12-22 00:25:12.362  INFO 19640 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-22 00:25:12.370  INFO 19640 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-12-22 00:25:12.930  WARN 19640 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-12-22 00:25:13.301  WARN 19640 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2021-12-22 00:25:13.674  INFO 19640 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 5000 (http) with context path ''
+2021-12-22 00:25:13.688  INFO 19640 --- [restartedMain] c.m.d.DroneManagementApplication         : Started DroneManagementApplication in 6.372 seconds (JVM running for 7.08)
+2021-12-22 00:25:13.712  INFO 19640 --- [scheduling-1] c.m.d.controllers.DroneController        : Battery status
+2021-12-22 00:25:13.872  INFO 19640 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845490
+2021-12-22 00:25:13.872  INFO 19640 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845488
+2021-12-22 00:25:13.872  INFO 19640 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845477
+2021-12-22 00:25:13.872  INFO 19640 --- [scheduling-1] c.m.d.controllers.DroneController        : Drone 93845489
