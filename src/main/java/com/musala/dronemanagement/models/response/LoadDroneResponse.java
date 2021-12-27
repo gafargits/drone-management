@@ -4,14 +4,14 @@ import java.util.UUID;
 
 public class LoadDroneResponse {
     private UUID droneId;
-    private String name;
+    private String code;
 
     public LoadDroneResponse() {
     }
 
-    public LoadDroneResponse(UUID droneId, String name) {
+    public LoadDroneResponse(UUID droneId, String code) {
         this.droneId = droneId;
-        this.name = name;
+        this.code = code;
     }
 
     public UUID getDroneId() {
@@ -22,12 +22,12 @@ public class LoadDroneResponse {
         this.droneId = droneId;
     }
 
-    public String getName() {
-        return name;
+    public String getCode() {
+        return code;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCode(String code) {
+        this.code = code;
     }
 }
 

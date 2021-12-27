@@ -20,7 +20,6 @@ public class DroneEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
-
     private long serialNumber;
 
     @Enumerated(EnumType.STRING)

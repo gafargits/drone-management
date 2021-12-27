@@ -2,6 +2,7 @@ package com.musala.dronemanagement.controllers;
 
 import com.musala.dronemanagement.exceptions.*;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -42,7 +43,10 @@ public class ErrorHandlingControllerAdvice extends ResponseEntityExceptionHandle
     public Map<String, List<String>> onConstraintValidationException(
             ConstraintViolationException e) {
         Map<String, List<String>> body = new HashMap<>();
-        body.put("errors", e.getConstraintViolations().stream().map(violation -> violation.getMessage()).collect(Collectors.toList()));
+        body.put("errors", e.getConstraintViolations()
+                .stream()
+                .map(violation -> violation.getMessage())
+                .collect(Collectors.toList()));
         return body;
     }
 
@@ -108,4 +112,23 @@ public class ErrorHandlingControllerAdvice extends ResponseEntityExceptionHandle
         );
         return new ResponseEntity<>(medicationException, HttpStatus.NOT_FOUND);
     }
+
+//    @ExceptionHandler({DataIntegrityViolationException.class})
+//    @ResponseStatus(HttpStatus.CONFLICT)
+//    @ResponseBody
+//    public ValidationErrorResponse onDataIntegrityViolationException(DataIntegrityViolationException e) {
+//        String message = e.getMostSpecificCause().getMessage();
+//        String table = StringUtils.substringBetween(message, "tbl_", "_col");
+//        String columns = StringUtils.substringBetween(message, "_col_", "\"");
+//
+//        String resource = table == null ? "resource" : table;
+//        String fields = columns == null ? "fields" : columns.replace("__", ", ").replace("_", " ");
+//
+//        ValidationErrorResponse error = new ValidationErrorResponse();
+//
+//        error.setErrors(singletonList(new Violation(fields, format("%s with matching %s already exists",
+//                WordUtils.capitalize(resource.replace("_", " ")), fields))
+//        ));
+//        return error;
+//    }
 }

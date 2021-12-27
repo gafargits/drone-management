@@ -40,44 +40,40 @@ public class DroneServiceImpl implements DroneService {
     public DroneRegistrationResponse registerDrone(DroneRegistrationRequest drone) {
         DroneEntity droneEntity = modelMapper.map(drone, DroneEntity.class);
         DroneEntity existing = droneRepository.findBySerialNumber(droneEntity.getSerialNumber());
-        if (existing == null) {
-            droneEntity.setState(DroneState.IDLE);
-            return modelMapper.map(droneRepository.save(droneEntity), DroneRegistrationResponse.class);
+        if(existing != null){
+            throw new DroneRequestException("Drone already registered. You can only register a drone once.");
         }
-        throw new DroneRequestException("Drone already registered. You can only register a drone once.");
+        droneEntity.setState(DroneState.IDLE);
+        return modelMapper.map(droneRepository.save(droneEntity), DroneRegistrationResponse.class);
     }
 
     @Override
     public LoadDroneResponse loadDrone(LoadDroneRequest loadDroneRequest) {
-        DroneRegistrationResponse drone =
-                modelMapper
-                        .map(droneRepository.findById(loadDroneRequest.getDroneId())
-                                .orElseThrow(() -> new DroneNotFoundException("You can't load an unregistered drone")), DroneRegistrationResponse.class);
+        DroneRegistrationResponse drone = droneRepository.findById(loadDroneRequest.getDroneId())
+                .map(d -> modelMapper.map(d, DroneRegistrationResponse.class))
+                .orElseThrow(() -> new DroneNotFoundException("You can't load an unregistered drone"));
 
         if (drone.getBatteryCapacity() < 25) {
             throw new DroneRequestException("Drone with less than 25% battery capacity cannot be loaded");
         }
-        if (drone.getState() != DroneState.IDLE) {
-            if (drone.getState() != DroneState.LOADED) {
+        if (drone.getState() != DroneState.IDLE  && drone.getState() != DroneState.LOADED) {
                 throw new DroneRequestException("Drone can only be loaded when idle or loaded but with space to accommodate more medications");
-            }
         }
-        MedicationEntity medicationEntity = medicationRepository.findByCode(loadDroneRequest.getName());
+        MedicationEntity medicationEntity = medicationRepository.findByCode(loadDroneRequest.getCode());
         if (medicationEntity == null) {
             throw new MedicationNotFoundException("Medication not yet registered. You cannot load an unregistered medication");
         }
         drone.setState(DroneState.LOADING);
         double droneCurrentMedicationWeight = drone.getMedications().stream()
-                .mapToDouble(d -> d.getWeight())
-                .reduce(0.0, (a, b) -> a + b);
-        if ((droneCurrentMedicationWeight + medicationEntity.getWeight()) <= drone.getWeight()) {
-            DroneEntity droneEntity = modelMapper.map(drone, DroneEntity.class);
-            droneEntity.getMedications().add(medicationEntity);
-            droneEntity.setState(DroneState.LOADED);
-            return modelMapper.map(droneRepository.saveAndFlush(droneEntity), LoadDroneResponse.class);
-        } else {
+                .mapToDouble(MedicationResponse::getWeight)
+                .reduce(0.0, Double::sum);
+        if ((droneCurrentMedicationWeight + medicationEntity.getWeight()) >= drone.getWeight()) {
             throw new DroneRequestException("Medication too heavy for this drone, check other drones.");
         }
+        DroneEntity droneEntity = modelMapper.map(drone, DroneEntity.class);
+        droneEntity.getMedications().add(medicationEntity);
+        droneEntity.setState(DroneState.LOADED);
+        return modelMapper.map(droneRepository.saveAndFlush(droneEntity), LoadDroneResponse.class);
     }
 
     @Override
