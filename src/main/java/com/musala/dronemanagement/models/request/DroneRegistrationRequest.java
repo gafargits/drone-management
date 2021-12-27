@@ -9,8 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DroneRegistrationRequest {
-    @NotNull
-    private long serialNumber;
+    private String serialNumber;
 
     @Enumerated(EnumType.STRING)
     private DroneModel model;
@@ -30,8 +29,8 @@ public class DroneRegistrationRequest {
     public DroneRegistrationRequest() {
     }
 
-    public DroneRegistrationRequest(@NotNull @Pattern(regexp = "[0-9]+", message = "serial number can only be number")
-                                            long serialNumber, DroneModel model, @Max(value = 500, message = "Max weight is 500") @Min(value = 0, message = "Weight cannot be negative")
+    public DroneRegistrationRequest(
+            String serialNumber, DroneModel model, @Max(value = 500, message = "Max weight is 500") @Min(value = 0, message = "Weight cannot be negative")
                                             int weight, @Min(value = 0, message = "Battery capacity cannot be negative") @Max(value = 100, message = "Battery capacity cannot exceed 100%") int batteryCapacity, DroneState state) {
         this.serialNumber = serialNumber;
         this.model = model;
@@ -40,7 +39,7 @@ public class DroneRegistrationRequest {
         this.state = state;
     }
 
-    public long getSerialNumber() {
+    public String getSerialNumber() {
         return serialNumber;
     }
 

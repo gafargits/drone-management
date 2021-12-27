@@ -46,7 +46,7 @@ public class DroneController {
         return ResponseEntity.created(uri).body(droneService.registerDrone(drone));
     }
 
-    @PostMapping("/load")
+    @PutMapping("/load")
     public ResponseEntity<LoadDroneResponse> loadDrone(@RequestBody @Valid final LoadDroneRequest loadDroneRequest){
         URI uri = URI.create(ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/drone/load").toUriString());
         return ResponseEntity.created(uri).body(droneService.loadDrone(loadDroneRequest));
@@ -73,7 +73,7 @@ public class DroneController {
     }
 
     @Scheduled(fixedRate = 1800000)
-    @GetMapping("/battery-levels")
+    @GetMapping("/drone-battery-levels")
     public ResponseEntity<List<BatteryLevelResponse>> batteryLevels(){
         logger.info("Battery status");
         droneService.batteryLevels().stream().forEach(e -> logger.info("Drone " +e.getSerialNumber(), e.getBatteryCapacity()));

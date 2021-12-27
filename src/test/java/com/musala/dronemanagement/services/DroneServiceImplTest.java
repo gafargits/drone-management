@@ -39,12 +39,12 @@ class DroneServiceImplTest extends BaseServiceTest {
     @DisplayName("register_drone_successful")
     void registerDrone_successful() {
         //Given
-        long serialNumber = 1L;
+        String serialNumber = "";
         var droneEntity = getDroneEntity(serialNumber);
         var droneRequest = getDroneRegistrationRequest(serialNumber);
         var expectedResponse = getDroneResponse(serialNumber);
         //When
-        when(droneRepository.findBySerialNumber(anyLong())).thenReturn(null);
+        when(droneRepository.findBySerialNumber(anyString())).thenReturn(null);
         when(droneRepository.save(droneEntity)).thenReturn(droneEntity);
         when(modelMapper.map(droneRequest, DroneEntity.class)).thenReturn(droneEntity);
         when(modelMapper.map(droneEntity, DroneRegistrationResponse.class)).thenReturn(expectedResponse);
@@ -58,11 +58,11 @@ class DroneServiceImplTest extends BaseServiceTest {
     @Test
     void registerDrone_droneAlreadExist_throwsException() {
         //Given
-        long serialNumber = 1L;
+        String serialNumber = "";
         var droneEntity = getDroneEntity(serialNumber);
         var droneRequest = getDroneRegistrationRequest(serialNumber);
         //When
-        when(droneRepository.findBySerialNumber(anyLong())).thenReturn(droneEntity); //drone already exist in DB
+        when(droneRepository.findBySerialNumber(anyString())).thenReturn(droneEntity); //drone already exist in DB
         when(modelMapper.map(droneRequest, DroneEntity.class)).thenReturn(droneEntity);
 
         //Then
@@ -101,9 +101,9 @@ class DroneServiceImplTest extends BaseServiceTest {
         //Given
         UUID id = UUID.randomUUID();
         int batteryCapacity = 24;
-        var droneEntity = getDroneEntityWithCapacity(1L, batteryCapacity);
+        var droneEntity = getDroneEntityWithCapacity("", batteryCapacity);
         var loadDroneRequest = getLoadDroneRequest(id, "");
-        var droneResponse = getDroneResponse(1L, batteryCapacity);
+        var droneResponse = getDroneResponse("", batteryCapacity);
 
         //When
         when(droneRepository.findById(id)).thenReturn(ofNullable(droneEntity));
@@ -120,9 +120,9 @@ class DroneServiceImplTest extends BaseServiceTest {
         //Given
         UUID id = UUID.randomUUID();
         DroneState droneState = DroneState.LOADING;
-        var droneEntity = getDroneEntityWithDroneState(1L, droneState);
+        var droneEntity = getDroneEntityWithDroneState("", droneState);
         var loadDroneRequest = getLoadDroneRequest(id, "");
-        var droneResponse = getDroneResponse(1L, droneState);
+        var droneResponse = getDroneResponse("", droneState);
 
         //When
         when(droneRepository.findById(id)).thenReturn(ofNullable(droneEntity));

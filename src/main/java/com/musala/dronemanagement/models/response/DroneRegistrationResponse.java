@@ -9,7 +9,7 @@ import java.util.UUID;
 
 public class DroneRegistrationResponse {
     private UUID id;
-    private long serialNumber;
+    private String serialNumber;
     private DroneModel model;
     private double weight;
     private int batteryCapacity;
@@ -19,7 +19,7 @@ public class DroneRegistrationResponse {
     public DroneRegistrationResponse() {
     }
 
-    public DroneRegistrationResponse(UUID id, long serialNumber, DroneModel model, double weight, int batteryCapacity, DroneState state, List<MedicationResponse> medications) {
+    public DroneRegistrationResponse(UUID id, String serialNumber, DroneModel model, double weight, int batteryCapacity, DroneState state, List<MedicationResponse> medications) {
         this.id = id;
         this.serialNumber = serialNumber;
         this.model = model;
@@ -37,11 +37,11 @@ public class DroneRegistrationResponse {
         this.id = id;
     }
 
-    public long getSerialNumber() {
+    public String getSerialNumber() {
         return serialNumber;
     }
 
-    public void setSerialNumber(long serialNumber) {
+    public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
     }
 

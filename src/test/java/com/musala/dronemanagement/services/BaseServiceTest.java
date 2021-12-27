@@ -17,46 +17,46 @@ import java.util.UUID;
 public class BaseServiceTest {
 
     DroneRegistrationRequest getDroneRegistrationRequest(){
-        return new DroneRegistrationRequest(1L, DroneModel.Cruiserweight, 250, 50, DroneState.IDLE);
+        return new DroneRegistrationRequest("", DroneModel.Cruiserweight, 250, 50, DroneState.IDLE);
     }
 
-    DroneRegistrationRequest getDroneRegistrationRequest(long serialNumber){
+    DroneRegistrationRequest getDroneRegistrationRequest(String serialNumber){
         return new DroneRegistrationRequest(serialNumber, DroneModel.Cruiserweight, 250, 50, DroneState.IDLE);
     }
-    DroneEntity getDroneEntity(long serialNumber){
+    DroneEntity getDroneEntity(String serialNumber){
         var drone = getDroneRegistrationRequest(serialNumber);
         return new DroneEntity(UUID.randomUUID(), drone.getSerialNumber(), drone.getModel(), drone.getWeight(), drone.getBatteryCapacity(), drone.getState(), new ArrayList<>() );
     }
-    DroneEntity getDroneEntity(long serialNumber, double weight){
+    DroneEntity getDroneEntity(String serialNumber, double weight){
         var response = getDroneEntity(serialNumber);
         response.setWeight(weight);
         return response;
     }
-    DroneEntity getDroneEntityWithCapacity(long serialNumber, int batteryCapacity){
+    DroneEntity getDroneEntityWithCapacity(String serialNumber, int batteryCapacity){
         var response = getDroneEntity(serialNumber);
         response.setBatteryCapacity(batteryCapacity);
         return response;
     }
 
-    DroneEntity getDroneEntityWithDroneState(long serialNumber, DroneState droneState){
+    DroneEntity getDroneEntityWithDroneState(String serialNumber, DroneState droneState){
         var response = getDroneEntity(serialNumber);
         response.setState(droneState);
         return response;
     }
 
-    DroneRegistrationResponse getDroneResponse(long serialNumber){
+    DroneRegistrationResponse getDroneResponse(String serialNumber){
         var drone = getDroneRegistrationRequest(serialNumber);
         return new DroneRegistrationResponse(UUID.randomUUID(), drone.getSerialNumber(), drone.getModel(), drone.getWeight(), drone.getBatteryCapacity(), drone.getState(), new ArrayList<>() );
     }
 
-    DroneRegistrationResponse getDroneResponse(long serialNumber, int batteryCapacity){
+    DroneRegistrationResponse getDroneResponse(String serialNumber, int batteryCapacity){
         var drone = getDroneRegistrationRequest(serialNumber);
         var regResponse = new DroneRegistrationResponse(UUID.randomUUID(), drone.getSerialNumber(), drone.getModel(), drone.getWeight(), drone.getBatteryCapacity(), drone.getState(), new ArrayList<>() );
         regResponse.setBatteryCapacity(batteryCapacity);
         return regResponse;
     }
 
-    DroneRegistrationResponse getDroneResponse(long serialNumber, DroneState droneState){
+    DroneRegistrationResponse getDroneResponse(String serialNumber, DroneState droneState){
         var drone = getDroneRegistrationRequest(serialNumber);
         var regResponse = new DroneRegistrationResponse(UUID.randomUUID(), drone.getSerialNumber(), drone.getModel(), drone.getWeight(), drone.getBatteryCapacity(), drone.getState(), new ArrayList<>() );
         regResponse.setState(droneState);
@@ -106,6 +106,6 @@ public class BaseServiceTest {
 
     LoadDroneResponse getLoadDroneResponse(UUID id, String code){
         var loadDroneRequest = getLoadDroneRequest(id, code);
-        return new LoadDroneResponse(loadDroneRequest.getDroneId(), loadDroneRequest.getCode());
+        return new LoadDroneResponse(loadDroneRequest.getDroneId(), loadDroneRequest.getMedicationCode());
     }
 }

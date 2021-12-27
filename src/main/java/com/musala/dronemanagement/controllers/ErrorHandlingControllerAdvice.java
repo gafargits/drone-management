@@ -70,13 +70,11 @@ public class ErrorHandlingControllerAdvice extends ResponseEntityExceptionHandle
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(value = {DroneRequestException.class})
     public ResponseEntity<Object> handleDroneRequestException(DroneRequestException e) {
-        //Create payload containing exception details
         DroneException droneException = new DroneException(
                 e.getMessage(),
                 HttpStatus.BAD_REQUEST,
                 ZonedDateTime.now(ZoneId.of("Z"))
         );
-        //Return response entity
         return new ResponseEntity<>(droneException, HttpStatus.BAD_REQUEST);
     }
 
@@ -113,22 +111,4 @@ public class ErrorHandlingControllerAdvice extends ResponseEntityExceptionHandle
         return new ResponseEntity<>(medicationException, HttpStatus.NOT_FOUND);
     }
 
-//    @ExceptionHandler({DataIntegrityViolationException.class})
-//    @ResponseStatus(HttpStatus.CONFLICT)
-//    @ResponseBody
-//    public ValidationErrorResponse onDataIntegrityViolationException(DataIntegrityViolationException e) {
-//        String message = e.getMostSpecificCause().getMessage();
-//        String table = StringUtils.substringBetween(message, "tbl_", "_col");
-//        String columns = StringUtils.substringBetween(message, "_col_", "\"");
-//
-//        String resource = table == null ? "resource" : table;
-//        String fields = columns == null ? "fields" : columns.replace("__", ", ").replace("_", " ");
-//
-//        ValidationErrorResponse error = new ValidationErrorResponse();
-//
-//        error.setErrors(singletonList(new Violation(fields, format("%s with matching %s already exists",
-//                WordUtils.capitalize(resource.replace("_", " ")), fields))
-//        ));
-//        return error;
-//    }
 }

@@ -9,6 +9,6 @@ import java.util.UUID;
 
 @Repository
 public interface DroneRepository extends JpaRepository<DroneEntity, UUID> {
-    public DroneEntity findBySerialNumber(long serialNumber);
+    public DroneEntity findBySerialNumber(String serialNumber);
     public List<DroneEntity> findByState(String state);
 }

@@ -8,21 +8,21 @@ public class LoadDroneRequest {
     private UUID droneId;
 
     @NotNull(message = "medication code cannot be empty")
-    private String code;
+    private String medicationCode;
 
     public LoadDroneRequest() {
     }
 
-    public LoadDroneRequest(@NotNull UUID droneId, @NotNull String code) {
+    public LoadDroneRequest(@NotNull UUID droneId, @NotNull String medicationCode) {
         this.droneId = droneId;
-        this.code = code;
+        this.medicationCode = medicationCode;
     }
 
     public UUID getDroneId() {
         return droneId;
     }
 
-    public String getCode() {
-        return code;
+    public String getMedicationCode() {
+        return medicationCode;
     }
 }

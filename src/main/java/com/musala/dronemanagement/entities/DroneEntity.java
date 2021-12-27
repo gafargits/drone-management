@@ -20,7 +20,7 @@ public class DroneEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
-    private long serialNumber;
+    private String serialNumber;
 
     @Enumerated(EnumType.STRING)
     private DroneModel model;
@@ -43,7 +43,7 @@ public class DroneEntity {
     public DroneEntity() {
     }
 
-    public DroneEntity(UUID id, long serialNumber, DroneModel model, @Max(value = 500, message = "Max weight is 500") @Min(value = 0, message = "Weight cannot be negative") double weight, @Min(value = 0, message = "Battery capacity cannot be negative") @Max(value = 100, message = "Battery capacity cannot exceed 100%") int batteryCapacity, DroneState state, List<MedicationEntity> medications) {
+    public DroneEntity(UUID id, String serialNumber, DroneModel model, @Max(value = 500, message = "Max weight is 500") @Min(value = 0, message = "Weight cannot be negative") double weight, @Min(value = 0, message = "Battery capacity cannot be negative") @Max(value = 100, message = "Battery capacity cannot exceed 100%") int batteryCapacity, DroneState state, List<MedicationEntity> medications) {
         this.id = id;
         this.serialNumber = serialNumber;
         this.model = model;
@@ -61,11 +61,11 @@ public class DroneEntity {
         this.id = id;
     }
 
-    public long getSerialNumber() {
+    public String getSerialNumber() {
         return serialNumber;
     }
 
-    public void setSerialNumber(long serialNumber) {
+    public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
     }
 

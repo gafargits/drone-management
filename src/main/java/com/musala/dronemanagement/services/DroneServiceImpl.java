@@ -59,7 +59,7 @@ public class DroneServiceImpl implements DroneService {
         if (drone.getState() != DroneState.IDLE  && drone.getState() != DroneState.LOADED) {
                 throw new DroneRequestException("Drone can only be loaded when idle or loaded but with space to accommodate more medications");
         }
-        MedicationEntity medicationEntity = medicationRepository.findByCode(loadDroneRequest.getCode());
+        MedicationEntity medicationEntity = medicationRepository.findByCode(loadDroneRequest.getMedicationCode());
         if (medicationEntity == null) {
             throw new MedicationNotFoundException("Medication not yet registered. You cannot load an unregistered medication");
         }

@@ -20,9 +20,10 @@ public class PreloadDB {
     @Bean
     CommandLineRunner run(DroneServiceImpl droneService, MedicationServiceImpl medicationService){
 		return args -> {
-            droneService.registerDrone(new DroneRegistrationRequest(12345, DroneModel.Lightweight, 100, 70, DroneState.IDLE ));
-			droneService.registerDrone(new DroneRegistrationRequest(12346, DroneModel.Cruiserweight, 250, 50, DroneState.IDLE ));
-            droneService.registerDrone(new DroneRegistrationRequest(12347, DroneModel.Heavyweight, 500, 80, DroneState.IDLE ));
+            droneService.registerDrone(new DroneRegistrationRequest("12345", DroneModel.Lightweight, 100, 70, DroneState.IDLE ));
+			droneService.registerDrone(new DroneRegistrationRequest("12346", DroneModel.Cruiserweight, 250, 50, DroneState.IDLE ));
+            droneService.registerDrone(new DroneRegistrationRequest("12347", DroneModel.Middleweight, 400, 80, DroneState.IDLE ));
+            droneService.registerDrone(new DroneRegistrationRequest("12348", DroneModel.Heavyweight, 500, 80, DroneState.IDLE ));
 
             medicationService.registerMedication(new MedicationRequest("Paracetamol", 20, "PARA", "http://paracetamol.url"));
             medicationService.registerMedication(new MedicationRequest("Piriton", 25, "PIRI", "http://piriton.url"));
