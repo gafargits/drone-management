@@ -1,22 +1,26 @@
 package com.musala.dronemanagement.models.response;
 
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+
 public class BatteryLevelResponse {
-    private long serialNumber;
+    private String serialNumber;
     private int batteryCapacity;
+    private ZonedDateTime timeStamp;
 
-    public BatteryLevelResponse() {
+    public ZonedDateTime getTimeStamp() {
+        return timeStamp;
     }
 
-    public BatteryLevelResponse(long serialNumber, int batteryCapacity) {
-        this.serialNumber = serialNumber;
-        this.batteryCapacity = batteryCapacity;
+    public void setTimeStamp(ZonedDateTime timeStamp) {
+        this.timeStamp = timeStamp;
     }
 
-    public long getSerialNumber() {
+    public String getSerialNumber() {
         return serialNumber;
     }
 
-    public void setSerialNumber(long serialNumber) {
+    public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
     }
 

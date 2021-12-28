@@ -2,7 +2,7 @@
 ### Technology Stack
 - Java 11
 - Spring Boot
-- H2 DB
+- H2 DB: In-memory DB.
 - Docker
 
 ### Description of service
@@ -10,7 +10,7 @@ The service are set of REST API endpoints that allows for the user to
 - register a drone
 - load a drone with medication items
 - check loaded medication items for a given drone
-- check available drones for loading
+- check available drones for loading: ***A drone is available when it is in the state of IDLE or LOADED, but with space to accommodate more medication items.***
 - check drone battery level for a given drone;
 - register a medication
 - Get all registered medications
@@ -26,8 +26,11 @@ The service are set of REST API endpoints that allows for the user to
 
 ### Starting Application
 The application has been packaged in a docker container. 
-Navigate to the root of the application and start the application with 
-```docker-compose up```
+Navigate to the root of the application and start the application with the following commands
+```
+mvn clean package
+docker-compose up
+```
 
 The application will start on port 5000.
 ### Testing

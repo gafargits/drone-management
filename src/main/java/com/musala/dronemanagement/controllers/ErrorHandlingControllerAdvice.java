@@ -1,8 +1,6 @@
 package com.musala.dronemanagement.controllers;
 
 import com.musala.dronemanagement.exceptions.*;
-import org.springframework.context.support.DefaultMessageSourceResolvable;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,13 +13,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import javax.validation.ConstraintViolationException;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 @ControllerAdvice
 public class ErrorHandlingControllerAdvice extends ResponseEntityExceptionHandler {
@@ -29,65 +22,71 @@ public class ErrorHandlingControllerAdvice extends ResponseEntityExceptionHandle
     @Override
     public ResponseEntity<Object> handleHttpMessageNotReadable(HttpMessageNotReadableException exception, HttpHeaders headers,
                                                                HttpStatus status, WebRequest request) {
-        DroneException droneException = new DroneException(
+        APISubError APISubError = new APISubError(
                 exception.getMessage(),
                 HttpStatus.BAD_REQUEST,
                 ZonedDateTime.now(ZoneId.of("Z"))
         );
-        return new ResponseEntity<>(droneException, HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(APISubError, HttpStatus.BAD_REQUEST);
     }
 
-    @ExceptionHandler(ConstraintViolationException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    @ResponseBody
-    public Map<String, List<String>> onConstraintValidationException(
-            ConstraintViolationException e) {
-        Map<String, List<String>> body = new HashMap<>();
-        body.put("errors", e.getConstraintViolations()
-                .stream()
-                .map(violation -> violation.getMessage())
-                .collect(Collectors.toList()));
-        return body;
-    }
+//    @ExceptionHandler(ConstraintViolationException.class)
+//    @ResponseStatus(HttpStatus.BAD_REQUEST)
+//    @ResponseBody
+//    public Map<String, List<String>> onConstraintValidationException(
+//            ConstraintViolationException e) {
+//        Map<String, List<String>> body = new HashMap<>();
+//        body.put("errors", e.getConstraintViolations()
+//                .stream()
+//                .map(violation -> violation.getMessage())
+//                .collect(Collectors.toList()));
+//        return body;
+//    }
 
     @Override
-    public ResponseEntity<Object> handleMethodArgumentNotValid(
-            MethodArgumentNotValidException ex, HttpHeaders headers,
+    public ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers,
             HttpStatus status, WebRequest request)  {
 
-        Map<String, List<String>> body = new HashMap<>();
-        List<String> errors = ex.getBindingResult()
-                .getFieldErrors()
-                .stream()
-                .map(DefaultMessageSourceResolvable::getDefaultMessage)
-                .collect(Collectors.toList());
-
-        body.put("errors", errors);
-        return new ResponseEntity<>(body, HttpStatus.BAD_REQUEST);
+        APISubError APISubError = new APISubError(
+                ex.getMessage(),
+                HttpStatus.BAD_REQUEST,
+                ZonedDateTime.now(ZoneId.of("Z"))
+        );
+        return new ResponseEntity<>(APISubError, HttpStatus.BAD_REQUEST);
+//        Map<String, List<String>> body = new HashMap<>();
+//        List<String> errors = ex.getBindingResult()
+//                .getFieldErrors()
+//                .stream()
+//                .map(DefaultMessageSourceResolvable::getDefaultMessage)
+//                .map(f -> f.getField() +  " has invalid value supplied" )
+//                .collect(Collectors.toList());
+//
+//        body.put("errors", errors);
+//        return new ResponseEntity<>(body, HttpStatus.BAD_REQUEST);
     }
 
     @ResponseBody
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(value = {DroneRequestException.class})
     public ResponseEntity<Object> handleDroneRequestException(DroneRequestException e) {
-        DroneException droneException = new DroneException(
+        APISubError APISubError = new APISubError(
                 e.getMessage(),
                 HttpStatus.BAD_REQUEST,
                 ZonedDateTime.now(ZoneId.of("Z"))
         );
-        return new ResponseEntity<>(droneException, HttpStatus.BAD_REQUEST);
+        return new ResponseEntity<>(APISubError, HttpStatus.BAD_REQUEST);
     }
 
     @ResponseBody
     @ResponseStatus(HttpStatus.NOT_FOUND)
     @ExceptionHandler(value = {DroneNotFoundException.class})
     public ResponseEntity<Object> droneNotFoundException(DroneNotFoundException e) {
-        DroneException droneException = new DroneException(
+        APISubError APISubError = new APISubError(
                 e.getMessage(),
                 HttpStatus.NOT_FOUND,
                 ZonedDateTime.now(ZoneId.of("Z"))
         );
-        return new ResponseEntity<>(droneException, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(APISubError, HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler(value = {MedicationRequestException.class})

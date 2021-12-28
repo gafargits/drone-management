@@ -2,6 +2,7 @@ package com.musala.dronemanagement.services;
 
 import com.musala.dronemanagement.entities.DroneEntity;
 import com.musala.dronemanagement.entities.DroneState;
+import com.musala.dronemanagement.entities.LogHistoryEntity;
 import com.musala.dronemanagement.entities.MedicationEntity;
 import com.musala.dronemanagement.exceptions.DroneNotFoundException;
 import com.musala.dronemanagement.exceptions.DroneRequestException;
@@ -13,6 +14,7 @@ import com.musala.dronemanagement.models.response.DroneRegistrationResponse;
 import com.musala.dronemanagement.models.response.LoadDroneResponse;
 import com.musala.dronemanagement.models.response.MedicationResponse;
 import com.musala.dronemanagement.repository.DroneRepository;
+import com.musala.dronemanagement.repository.LogHistoryRepository;
 import com.musala.dronemanagement.repository.MedicationRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,12 +30,14 @@ public class DroneServiceImpl implements DroneService {
     private final DroneRepository droneRepository;
     private final MedicationRepository medicationRepository;
     private final ModelMapper modelMapper;
+    private final LogHistoryRepository logHistoryRepository;
 
     @Autowired
-    public DroneServiceImpl(DroneRepository droneRepository, MedicationRepository medicationRepository, ModelMapper modelMapper) {
+    public DroneServiceImpl(DroneRepository droneRepository, MedicationRepository medicationRepository, ModelMapper modelMapper, LogHistoryRepository logHistoryRepository) {
         this.droneRepository = droneRepository;
         this.medicationRepository = medicationRepository;
         this.modelMapper = modelMapper;
+        this.logHistoryRepository = logHistoryRepository;
     }
 
     @Override
@@ -115,10 +119,19 @@ public class DroneServiceImpl implements DroneService {
     }
 
     @Override
-    public List<BatteryLevelResponse> batteryLevels() {
-        List<BatteryLevelResponse> batteryLevels = droneRepository.findAll()
+    public void logBatteryLevels() {
+        var drones =  droneRepository.findAll()
                 .stream()
-                .map(drone -> modelMapper.map(drone, BatteryLevelResponse.class))
+                .map(dd -> modelMapper.map(dd, LogHistoryEntity.class))
+                .collect(Collectors.toList());
+        logHistoryRepository.saveAll(drones);
+    }
+
+    @Override
+    public List<BatteryLevelResponse> getBatteryLevels(){
+        var batteryLevels = logHistoryRepository.findAll()
+                .stream()
+                .map(d -> modelMapper.map(d, BatteryLevelResponse.class))
                 .collect(Collectors.toList());
         return batteryLevels;
     }

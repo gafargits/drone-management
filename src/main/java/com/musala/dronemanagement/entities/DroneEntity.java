@@ -1,7 +1,5 @@
 package com.musala.dronemanagement.entities;
 
-//import com.musala.dronemanagement.models.request.MedicationRequest;
-
 import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;

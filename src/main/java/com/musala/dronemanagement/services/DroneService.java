@@ -20,5 +20,7 @@ public interface DroneService {
     List<DroneRegistrationResponse> availableDrones();
     long batteryLevel(UUID droneId);
     List<DroneRegistrationResponse> allDrones();
-    List<BatteryLevelResponse> batteryLevels();
+    void logBatteryLevels();
+    List<BatteryLevelResponse> getBatteryLevels();
+
 }
