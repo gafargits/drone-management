@@ -22,5 +22,5 @@ public interface DroneService {
     List<DroneRegistrationResponse> allDrones();
     void logBatteryLevels();
     List<BatteryLevelResponse> getBatteryLevels();
-
+    List<BatteryLevelResponse> getDroneBatteryHistory(String serialNumber);
 }

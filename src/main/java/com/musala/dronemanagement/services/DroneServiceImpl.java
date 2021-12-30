@@ -18,6 +18,7 @@ import com.musala.dronemanagement.repository.LogHistoryRepository;
 import com.musala.dronemanagement.repository.MedicationRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -118,6 +119,7 @@ public class DroneServiceImpl implements DroneService {
         return drones;
     }
 
+    @Scheduled(fixedRate = 1800000)
     @Override
     public void logBatteryLevels() {
         var drones =  droneRepository.findAll()
@@ -134,5 +136,16 @@ public class DroneServiceImpl implements DroneService {
                 .map(d -> modelMapper.map(d, BatteryLevelResponse.class))
                 .collect(Collectors.toList());
         return batteryLevels;
+    }
+
+    @Override
+    public List<BatteryLevelResponse> getDroneBatteryHistory(String serialNumber) {
+        var batteryLevelResponse = logHistoryRepository.findAll()
+                .stream()
+                .filter(d -> d.getSerialNumber().equals(serialNumber))
+                .map(d -> modelMapper.map(d, BatteryLevelResponse.class))
+                .collect(Collectors.toList());
+
+        return batteryLevelResponse;
     }
 }

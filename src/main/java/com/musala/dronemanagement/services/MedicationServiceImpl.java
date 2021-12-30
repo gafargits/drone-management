@@ -3,7 +3,6 @@ package com.musala.dronemanagement.services;
 import com.musala.dronemanagement.entities.MedicationEntity;
 import com.musala.dronemanagement.exceptions.MedicationRequestException;
 import com.musala.dronemanagement.models.request.MedicationRequest;
-import com.musala.dronemanagement.models.response.DroneRegistrationResponse;
 import com.musala.dronemanagement.models.response.MedicationResponse;
 import com.musala.dronemanagement.repository.MedicationRepository;
 import org.modelmapper.ModelMapper;

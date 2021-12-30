@@ -25,9 +25,9 @@ public class PreloadDB {
             droneService.registerDrone(new DroneRegistrationRequest("12347", DroneModel.Middleweight, 400, 80, DroneState.IDLE ));
             droneService.registerDrone(new DroneRegistrationRequest("12348", DroneModel.Heavyweight, 500, 80, DroneState.IDLE ));
 
-            medicationService.registerMedication(new MedicationRequest("Paracetamol", 20, "PARA", "http://paracetamol.url"));
-            medicationService.registerMedication(new MedicationRequest("Piriton", 25, "PIRI", "http://piriton.url"));
-            medicationService.registerMedication(new MedicationRequest("Tetracycline", 30, "TETR", "http://tetracycline.url"));
+            medicationService.registerMedication(new MedicationRequest("Paracetamol", 20, "PARA", "https://images.app.goo.gl/g6zYjhcMjPC2axEg8"));
+            medicationService.registerMedication(new MedicationRequest("Piriton", 25, "PIRI", "https://images.app.goo.gl/16yQojpy15mbLu768"));
+            medicationService.registerMedication(new MedicationRequest("Tetracycline", 30, "TETR", "https://images.app.goo.gl/fVL56fECainsbJNx5"));
 		};
 	}
 }

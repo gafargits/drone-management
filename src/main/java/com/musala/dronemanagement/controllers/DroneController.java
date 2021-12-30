@@ -2,16 +2,12 @@ package com.musala.dronemanagement.controllers;
 
 import com.musala.dronemanagement.models.request.DroneRegistrationRequest;
 import com.musala.dronemanagement.models.request.LoadDroneRequest;
-import com.musala.dronemanagement.models.response.BatteryLevelResponse;
 import com.musala.dronemanagement.models.response.DroneRegistrationResponse;
 import com.musala.dronemanagement.models.response.LoadDroneResponse;
 import com.musala.dronemanagement.models.response.MedicationResponse;
 import com.musala.dronemanagement.services.DroneService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;

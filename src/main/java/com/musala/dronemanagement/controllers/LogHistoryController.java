@@ -21,7 +21,7 @@ public class LogHistoryController {
         this.droneService = droneService;
     }
 
-    @Scheduled(fixedRate = 1800000)
+
     @PostMapping("/log-drone-battery-levels")
     public ResponseEntity<Void> logBatteryLevels(){
         URI uri = URI.create(ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/log-drone-battery-levels").toUriString());
@@ -32,5 +32,10 @@ public class LogHistoryController {
     @GetMapping("/get-drone-battery-levels")
     public ResponseEntity<List<BatteryLevelResponse>> getBatteryLevels(){
         return ResponseEntity.ok().body(droneService.getBatteryLevels());
+    }
+
+    @GetMapping("/get-drone-battery-level/{serialNumber}")
+    public ResponseEntity<List<BatteryLevelResponse>> getDroneBatteryLevelHistory(String serialNumber){
+        return ResponseEntity.ok().body(droneService.getDroneBatteryHistory(serialNumber));
     }
 }

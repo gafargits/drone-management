@@ -30,19 +30,6 @@ public class ErrorHandlingControllerAdvice extends ResponseEntityExceptionHandle
         return new ResponseEntity<>(APISubError, HttpStatus.BAD_REQUEST);
     }
 
-//    @ExceptionHandler(ConstraintViolationException.class)
-//    @ResponseStatus(HttpStatus.BAD_REQUEST)
-//    @ResponseBody
-//    public Map<String, List<String>> onConstraintValidationException(
-//            ConstraintViolationException e) {
-//        Map<String, List<String>> body = new HashMap<>();
-//        body.put("errors", e.getConstraintViolations()
-//                .stream()
-//                .map(violation -> violation.getMessage())
-//                .collect(Collectors.toList()));
-//        return body;
-//    }
-
     @Override
     public ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex, HttpHeaders headers,
             HttpStatus status, WebRequest request)  {

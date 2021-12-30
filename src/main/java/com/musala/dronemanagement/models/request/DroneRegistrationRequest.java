@@ -5,8 +5,6 @@ import com.musala.dronemanagement.entities.DroneState;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class DroneRegistrationRequest {
     private String serialNumber;

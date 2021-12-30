@@ -1,5 +1,7 @@
 package com.musala.dronemanagement.entities;
 
+import org.hibernate.annotations.Type;
+
 import javax.persistence.*;
 import java.util.UUID;
 
@@ -21,8 +23,15 @@ public class MedicationEntity {
     @Column(name = "medicationImageUrl")
     private String medicationImageUrl;
 
-
     public MedicationEntity() {
+    }
+
+    public String getMedicationImageUrl() {
+        return medicationImageUrl;
+    }
+
+    public void setMedicationImageUrl(String medicationImageUrl) {
+        this.medicationImageUrl = medicationImageUrl;
     }
 
     public MedicationEntity(UUID id, String name, double weight, String code, String medicationImageUrl) {
@@ -55,14 +64,6 @@ public class MedicationEntity {
 
     public void setCode(String code) {
         this.code = code;
-    }
-
-    public String getMedicationImage() {
-        return medicationImageUrl;
-    }
-
-    public void setMedicationImage(String medicationImageUrl) {
-        this.medicationImageUrl = medicationImageUrl;
     }
 
     public String getName() {
